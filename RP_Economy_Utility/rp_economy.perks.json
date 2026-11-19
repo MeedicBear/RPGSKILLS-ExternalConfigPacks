@@ -1,0 +1,164 @@
+{
+  "Perks": [
+    {
+      "Id": "grease_monkey",
+      "DisplayName": "Grease Monkey",
+      "Description": "+20% vehicle repair speed/amount per rank.",
+      "Category": "Survival",
+      "Enabled": true,
+      "SortOrder": 10,
+      "RequiredCategoryLevel": 2,
+      "RequiredGlobalLevel": 1,
+      "MaxRank": 3,
+      "SkillPointCostPerRank": 1,
+      "Prerequisites": [ "master_craftsman" ],
+      "Effects": [
+        { "Type": "VehicleRepairBonus", "ValuePerRank": 0.20 }
+      ]
+    },
+    {
+      "Id": "fuel_saver",
+      "DisplayName": "Fuel Saver",
+      "Description": "15% chance per rank to refund vehicle fuel while driving.",
+      "Category": "Survival",
+      "Enabled": true,
+      "SortOrder": 11,
+      "RequiredCategoryLevel": 3,
+      "RequiredGlobalLevel": 1,
+      "MaxRank": 3,
+      "SkillPointCostPerRank": 1,
+      "Prerequisites": [ "grease_monkey" ],
+      "Effects": [
+        { "Type": "FuelSavePercent", "ValuePerRank": 0.15 }
+      ]
+    },
+    {
+      "Id": "fortifier_rp",
+      "DisplayName": "Base Fortifier",
+      "Description": "+20% barricade & structure repair efficiency per rank.",
+      "Category": "Survival",
+      "Enabled": true,
+      "SortOrder": 12,
+      "RequiredCategoryLevel": 3,
+      "RequiredGlobalLevel": 1,
+      "MaxRank": 3,
+      "SkillPointCostPerRank": 1,
+      "Prerequisites": [ "master_craftsman" ],
+      "Effects": [
+        { "Type": "StructureRepairBonus", "ValuePerRank": 0.20 }
+      ]
+    },
+    {
+      "Id": "artisan_refund",
+      "DisplayName": "Artisan Efficiency",
+      "Description": "10% chance per rank to refund a primary crafting material when crafting items.",
+      "Category": "Survival",
+      "Enabled": true,
+      "SortOrder": 13,
+      "RequiredCategoryLevel": 4,
+      "RequiredGlobalLevel": 1,
+      "MaxRank": 3,
+      "SkillPointCostPerRank": 1,
+      "Prerequisites": [ "master_craftsman" ],
+      "Effects": [
+        { "Type": "CraftingRefundChance", "ValuePerRank": 0.10 }
+      ]
+    },
+    {
+      "Id": "quick_learner_rp",
+      "DisplayName": "Trade Mastery",
+      "Description": "+10% global RPG XP gain per rank across all professions.",
+      "Category": "Survival",
+      "Enabled": true,
+      "SortOrder": 14,
+      "RequiredCategoryLevel": 2,
+      "RequiredGlobalLevel": 1,
+      "MaxRank": 3,
+      "SkillPointCostPerRank": 1,
+      "Effects": [
+        { "Type": "XpGainMultiplier", "CategoryFilter": "All", "ValuePerRank": 0.10 }
+      ]
+    },
+    {
+      "Id": "master_salvager",
+      "DisplayName": "Master Salvager",
+      "Description": "+20% chance per rank to recover bonus materials when salvaging your structures or barricades.",
+      "Category": "Gathering",
+      "Enabled": true,
+      "SortOrder": 10,
+      "RequiredCategoryLevel": 3,
+      "RequiredGlobalLevel": 1,
+      "MaxRank": 3,
+      "SkillPointCostPerRank": 1,
+      "Effects": [
+        { "Type": "SalvageBonusChance", "ValuePerRank": 0.20 }
+      ]
+    },
+    {
+      "Id": "lumber_tycoon",
+      "DisplayName": "Timber Syndicate",
+      "Description": "+20% double log yield chance & +10% Gathering XP per rank.",
+      "Category": "Gathering",
+      "Enabled": true,
+      "SortOrder": 11,
+      "RequiredCategoryLevel": 3,
+      "RequiredGlobalLevel": 1,
+      "MaxRank": 3,
+      "SkillPointCostPerRank": 1,
+      "Prerequisites": [ "quarry_breaker" ],
+      "Effects": [
+        { "Type": "DoubleDropChance", "ResourceFilter": "Tree", "ValuePerRank": 0.20 },
+        { "Type": "XpGainMultiplier", "CategoryFilter": "Gathering", "ValuePerRank": 0.10 }
+      ]
+    },
+    {
+      "Id": "prospectors_gold",
+      "DisplayName": "Scrap Prospector",
+      "Description": "20% chance per rank to find bonus Scrap Metal (ID 67) from ore nodes.",
+      "Category": "Gathering",
+      "Enabled": true,
+      "SortOrder": 12,
+      "RequiredCategoryLevel": 4,
+      "RequiredGlobalLevel": 1,
+      "MaxRank": 3,
+      "SkillPointCostPerRank": 1,
+      "Prerequisites": [ "double_ore_yield" ],
+      "Effects": [
+        { "Type": "ExtraDropItem", "ResourceFilter": "Ore", "ValuePerRank": 0.20, "ExtraItemId": 67 }
+      ]
+    },
+    {
+      "Id": "bounty_hunter_rp",
+      "DisplayName": "Bounty Hunter",
+      "Description": "Earn $15 Uconomy currency per rank per zombie kill.",
+      "Category": "CombatPvE",
+      "Enabled": true,
+      "SortOrder": 10,
+      "RequiredCategoryLevel": 2,
+      "RequiredGlobalLevel": 1,
+      "MaxRank": 3,
+      "SkillPointCostPerRank": 1,
+      "Effects": [
+        { "Type": "UconomyKillBounty", "Scope": "PvE", "ValuePerRank": 15.0 }
+      ]
+    },
+    {
+      "Id": "farmer_greenhouse",
+      "DisplayName": "Greenhouse Tycoon (Master Farmer)",
+      "Description": "[Master Farmer Exclusive] +20% crop harvest bonus & +15% Gathering XP per rank.",
+      "Category": "Gathering",
+      "Enabled": true,
+      "SortOrder": 13,
+      "RequiredCategoryLevel": 4,
+      "RequiredGlobalLevel": 6,
+      "RequiredClassId": "master_farmer",
+      "MaxRank": 2,
+      "SkillPointCostPerRank": 2,
+      "BadgeColorHex": "#84CC16",
+      "Effects": [
+        { "Type": "PlantHarvestBonusChance", "ValuePerRank": 0.20 },
+        { "Type": "XpGainMultiplier", "CategoryFilter": "Gathering", "ValuePerRank": 0.15 }
+      ]
+    }
+  ]
+}
